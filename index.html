@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お役立ちリンク集</title>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+            position: relative; 
+            overflow: hidden; 
+            
+            /* 【★追加】フッター（コピーライト）の高さ分の余白を確保 */
+            padding-bottom: 30px; 
+        }
+
+        /* ---------------------------------------------------- */
+        /* 【★追加】 画面下部にコピーライトを固定表示するスタイル */
+        /* ---------------------------------------------------- */
+        footer {
+            position: fixed;     /* 画面を基準に位置を固定 */
+            bottom: 0;           /* 画面の下端に配置 */
+            left: 0;             /* 画面の左端から開始 */
+            width: 100%;         /* 横幅いっぱい */
+            background-color: rgba(0, 0, 0, 0.7); /* 黒の透過背景 */
+            color: #ccc;         /* 文字色を薄いグレーに */
+            text-align: center;  /* テキストを中央寄せ */
+            padding: 5px 0;      /* 上下に少しパディング（高さの調整） */
+            font-size: 0.8em;    /* 文字を小さく */
+            z-index: 10;         /* 他の要素より最前面に */
+        }
+
+        /* ---------------------------------------------------- */
+        /* その他のスタイル (前回の回答と同じ) */
+        /* ---------------------------------------------------- */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #2b3e50; 
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+            z-index: 1;
+        }
+
+        .container {
+            margin: auto;
+            background-color: rgba(60, 60, 60, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            width: 90%; 
+            max-width: 1000px;
+            box-sizing: border-box;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            z-index: 2;
+            position: relative;
+        }
+        
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        a {
+            display: block;
+            padding: 15px;
+            background-color: rgba(0, 123, 255, 0.8);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+        a:hover {
+            background-color: rgba(0, 86, 179, 0.9);
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            h1 {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+
+<div class="container">
+    <h1>お役立ちリンク集</h1>
+    <ul>
+        <li><a href="https://www.google.com" target="_blank">Google</a></li>
+        <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+        <li><a href="https://www.wikipedia.org" target="_blank">Wikipedia</a></li>
+    </ul>
+</div>
+
+<footer>
+    &copy; 2025 GOSHTRK
+</footer>
+
+<script>
+// particles.js の初期化スクリプト (変更なし)
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "push": {
+        "enable": false,
+        "quantity": 4
+      },
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script>
+
+</body>
+</html>
